@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing & Invoicing - Pharmacy Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">💊 MediCare Pharmacy</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="medicines.html">Medicines</a></li>
+                <li><a href="add-medicine.html">Add Medicine</a></li>
+                <li><a href="billing.html" class="active">Billing</a></li>
+                <li><a href="stock.html">Stock</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <div class="page-header">
+            <div>
+                <h1>Billing & Invoicing</h1>
+                <p>Generate customer invoices and process medicine sales</p>
+            </div>
+            <div>
+                <button class="btn btn-secondary" onclick="window.print()">🖨️ Print Invoice</button>
+            </div>
+        </div>
+
+        <div class="two-column">
+            
+            <!-- Left Column: Customer & Items -->
+            <div>
+                <!-- Customer Details Card -->
+                <div class="section-box">
+                    <h2>Customer Information</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="cust-name">Customer Name</label>
+                            <input type="text" id="cust-name" placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="cust-phone">Phone Number</label>
+                            <input type="tel" id="cust-phone" placeholder="+1 (555) 019-2834">
+                        </div>
+                        <div class="form-group">
+                            <label for="doctor-name">Prescribing Doctor</label>
+                            <input type="text" id="doctor-name" placeholder="Dr. Jennifer Adams">
+                        </div>
+                        <div class="form-group">
+                            <label for="bill-date">Invoice Date</label>
+                            <input type="date" id="bill-date" value="2026-10-04">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add Medicine Item Card -->
+                <div class="section-box">
+                    <h2>Add Items to Invoice</h2>
+                    <div class="form-grid">
+                        <div class="form-group" style="grid-column: span 2;">
+                            <label for="select-medicine">Select Medicine</label>
+                            <select id="select-medicine">
+                                <option value="">-- Choose Medicine --</option>
+                                <option value="1">Paracetamol 500mg ($5.00)</option>
+                                <option value="2">Amoxicillin 250mg ($12.50)</option>
+                                <option value="3">Ibuprofen 400mg ($8.00)</option>
+                                <option value="4">Cetirizine 10mg ($4.50)</option>
+                                <option value="6">Omeprazole 20mg ($14.00)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="item-qty">Quantity</label>
+                            <input type="number" id="item-qty" min="1" value="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="item-price">Unit Price ($)</label>
+                            <input type="number" id="item-price" value="5.00" readonly>
+                        </div>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <button type="button" class="btn btn-primary">+ Add Item</button>
+                    </div>
+                </div>
+
+                <!-- Current Invoice Table -->
+                <div class="section-box">
+                    <h2>Invoice Items</h2>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Medicine</th>
+                                    <th>Unit Price</th>
+                                    <th>Qty</th>
+                                    <th>Total</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Paracetamol 500mg</td>
+                                    <td>$5.00</td>
+                                    <td>2</td>
+                                    <td>$10.00</td>
+                                    <td><button class="btn btn-danger btn-sm">Remove</button></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Amoxicillin 250mg</td>
+                                    <td>$12.50</td>
+                                    <td>1</td>
+                                    <td>$12.50</td>
+                                    <td><button class="btn btn-danger btn-sm">Remove</button></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Ibuprofen 400mg</td>
+                                    <td>$8.00</td>
+                                    <td>3</td>
+                                    <td>$24.00</td>
+                                    <td><button class="btn btn-danger btn-sm">Remove</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Bill Summary & Payment -->
+            <div>
+                <div class="section-box">
+                    <h2>Invoice Summary</h2>
+                    <p style="font-size: 13px; color: #666; margin-bottom: 12px;">Invoice: <strong>#INV-1025</strong></p>
+                    
+                    <div class="bill-summary">
+                        <div class="bill-row">
+                            <span>Subtotal:</span>
+                            <strong>$46.50</strong>
+                        </div>
+                        <div class="bill-row">
+                            <span>Tax (5%):</span>
+                            <span>$2.33</span>
+                        </div>
+                        <div class="bill-row">
+                            <span>Discount:</span>
+                            <span>$0.00</span>
+                        </div>
+                        <div class="bill-row total">
+                            <span>Grand Total:</span>
+                            <span>$48.83</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 20px;">
+                        <div class="form-group">
+                            <label for="payment-mode">Payment Method</label>
+                            <select id="payment-mode">
+                                <option value="cash">Cash</option>
+                                <option value="card">Credit / Debit Card</option>
+                                <option value="upi">UPI / Online Transfer</option>
+                                <option value="insurance">Health Insurance</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px;">
+                        <button type="button" class="btn btn-primary" style="text-align: center;">Complete Sale & Print</button>
+                        <button type="button" class="btn btn-secondary" style="text-align: center;">Reset Bill</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 MediCare Pharmacy Management System. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

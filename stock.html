@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Management - Pharmacy Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">💊 MediCare Pharmacy</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="medicines.html">Medicines</a></li>
+                <li><a href="add-medicine.html">Add Medicine</a></li>
+                <li><a href="billing.html">Billing</a></li>
+                <li><a href="stock.html" class="active">Stock</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <div class="page-header">
+            <div>
+                <h1>Stock Management</h1>
+                <p>Monitor real-time inventory levels, low stock warnings, and reorder requirements</p>
+            </div>
+            <div>
+                <a href="add-medicine.html" class="btn btn-primary">+ Add New Stock</a>
+            </div>
+        </div>
+
+        <!-- Stock Summary Cards -->
+        <div class="cards-grid">
+            <div class="card">
+                <h3>Total Units</h3>
+                <div class="value">4,820</div>
+                <p>Across all medicines</p>
+            </div>
+            <div class="card card-success">
+                <h3>In Stock</h3>
+                <div class="value">145 Items</div>
+                <p>Adequate inventory level</p>
+            </div>
+            <div class="card card-warning">
+                <h3>Low Stock</h3>
+                <div class="value">12 Items</div>
+                <p>Below minimum threshold</p>
+            </div>
+            <div class="card card-danger">
+                <h3>Out of Stock</h3>
+                <div class="value">3 Items</div>
+                <p>Needs urgent restocking</p>
+            </div>
+        </div>
+
+        <!-- Stock Table -->
+        <div class="section-box">
+            <h2>Current Inventory Status</h2>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Medicine Name</th>
+                            <th>Category</th>
+                            <th>Batch No</th>
+                            <th>Current Stock</th>
+                            <th>Min Required</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Paracetamol 500mg</strong></td>
+                            <td>Tablet</td>
+                            <td>BAT-2024-01</td>
+                            <td>120 units</td>
+                            <td>30 units</td>
+                            <td><span class="badge badge-success">In Stock</span></td>
+                            <td><button class="btn btn-secondary btn-sm">+ Restock</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Amoxicillin 250mg</strong></td>
+                            <td>Capsule</td>
+                            <td>BAT-2024-05</td>
+                            <td>15 units</td>
+                            <td>25 units</td>
+                            <td><span class="badge badge-warning">Low Stock</span></td>
+                            <td><button class="btn btn-primary btn-sm">+ Restock</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cough Relief Syrup</strong></td>
+                            <td>Syrup</td>
+                            <td>BAT-2023-09</td>
+                            <td>0 units</td>
+                            <td>20 units</td>
+                            <td><span class="badge badge-danger">Out of Stock</span></td>
+                            <td><button class="btn btn-danger btn-sm">+ Urgent Order</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cetirizine 10mg</strong></td>
+                            <td>Tablet</td>
+                            <td>BAT-2024-02</td>
+                            <td>210 units</td>
+                            <td>40 units</td>
+                            <td><span class="badge badge-success">In Stock</span></td>
+                            <td><button class="btn btn-secondary btn-sm">+ Restock</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hydrocortisone Cream</strong></td>
+                            <td>Ointment</td>
+                            <td>BAT-2024-07</td>
+                            <td>18 units</td>
+                            <td>20 units</td>
+                            <td><span class="badge badge-warning">Low Stock</span></td>
+                            <td><button class="btn btn-primary btn-sm">+ Restock</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Omeprazole 20mg</strong></td>
+                            <td>Capsule</td>
+                            <td>BAT-2024-08</td>
+                            <td>64 units</td>
+                            <td>25 units</td>
+                            <td><span class="badge badge-success">In Stock</span></td>
+                            <td><button class="btn btn-secondary btn-sm">+ Restock</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Insulin Glargine 100IU</strong></td>
+                            <td>Injection</td>
+                            <td>BAT-2024-04</td>
+                            <td>2 units</td>
+                            <td>15 units</td>
+                            <td><span class="badge badge-danger">Out of Stock</span></td>
+                            <td><button class="btn btn-danger btn-sm">+ Urgent Order</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Quick Stock Adjustment Section -->
+        <div class="section-box">
+            <h2>Quick Restock Form</h2>
+            <form action="#" method="post">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="restock-med">Select Medicine</label>
+                        <select id="restock-med" required>
+                            <option value="">-- Choose Medicine to Restock --</option>
+                            <option value="1">Amoxicillin 250mg (Current: 15)</option>
+                            <option value="2">Cough Relief Syrup (Current: 0)</option>
+                            <option value="3">Hydrocortisone Cream (Current: 18)</option>
+                            <option value="4">Insulin Glargine 100IU (Current: 2)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="restock-qty">Units to Add</label>
+                        <input type="number" id="restock-qty" min="1" placeholder="e.g. 50" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="supplier-name">Supplier / Distributor</label>
+                        <input type="text" id="supplier-name" placeholder="e.g. Apex Pharma Distributors">
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Update Stock Level</button>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 MediCare Pharmacy Management System. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

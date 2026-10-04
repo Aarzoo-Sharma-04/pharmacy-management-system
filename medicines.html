@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicines - Pharmacy Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">💊 MediCare Pharmacy</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="medicines.html" class="active">Medicines</a></li>
+                <li><a href="add-medicine.html">Add Medicine</a></li>
+                <li><a href="billing.html">Billing</a></li>
+                <li><a href="stock.html">Stock</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <div class="page-header">
+            <div>
+                <h1>Medicines Inventory</h1>
+                <p>Manage and view all medicines available in the pharmacy</p>
+            </div>
+            <div>
+                <a href="add-medicine.html" class="btn btn-primary">+ Add New Medicine</a>
+            </div>
+        </div>
+
+        <!-- Filter and Search Bar -->
+        <div class="filter-bar">
+            <input type="text" placeholder="Search by medicine name or batch..." style="flex: 1; min-width: 200px;">
+            <select>
+                <option value="">All Categories</option>
+                <option value="tablets">Tablets</option>
+                <option value="syrups">Syrups</option>
+                <option value="capsules">Capsules</option>
+                <option value="injections">Injections</option>
+                <option value="ointments">Ointments</option>
+            </select>
+            <button class="btn btn-secondary">Search</button>
+        </div>
+
+        <!-- Medicines Table -->
+        <div class="section-box">
+            <h2>All Medicines (Showing 8 records)</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Medicine Name</th>
+                            <th>Category</th>
+                            <th>Batch No</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Expiry Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#MED001</td>
+                            <td><strong>Paracetamol 500mg</strong></td>
+                            <td>Tablet</td>
+                            <td>BAT-2024-01</td>
+                            <td>$5.00</td>
+                            <td>120</td>
+                            <td>2027-08-15</td>
+                            <td><span class="badge badge-success">In Stock</span></td>
+                            <td>
+                                <button class="btn btn-secondary btn-sm">Edit</button>
+                                <button class="btn btn-danger btn-sm">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#MED002</td>
+                            <td><strong>Amoxicillin 250mg</strong></td>
+                            <td>Capsule</td>
+                            <td>BAT-2024-05</td>
+                            <td>$12.50</td>
+                            <td>15</td>
+                            <td>2026-12-10</td>
+                            <td><span class="badge badge-warning">Low Stock</span></td>
+                            <td>
+                                <button class="btn btn-secondary btn-sm">Edit</button>
+                                <button class="btn btn-danger btn-sm">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#MED003</td>
+                            <td><strong>Ibuprofen 400mg</strong></td>
+                            <td>Tablet</td>
+                            <td>BAT-2023-11</td>
+                            <td>$8.00</td>
+                            <td>85</td>
+                            <td>2027-03-20</td>
+                            <td><span class="badge badge-success">In Stock</span></td>
+                            <td>
+                                <button class="btn btn-secondary btn-sm">Edit</button>
+                                <button class="btn btn-danger btn-sm">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#MED004</td>
+                            <td><strong>Cetirizine 10mg</strong></td>
+                            <td>Tablet</td>
+                            <td>BAT-2024-02</td>
+                            <td>$4.50</td>
+                            <td>210</td>
+                            <td>2028-01-05</td>
+                            <td><span class="badge badge-success">In Stock</span></td>
+                            <td>
+                                <button class="btn btn-secondary btn-sm">Edit</button>
+                                <button class="btn btn-danger btn-sm">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#MED005</td>
+                            <td><strong>Cough Relief Syrup</strong></td>
+                            <td>Syrup</td>
+                            <td>BAT-2023-09</td>
+                            <td>$9.75</td>
+                            <td>0</td>
+                            <td>2026-11-30</td>
+                            <td><span class="badge badge-danger">Out of Stock</span></td>
+                            <td>
+                                <button class="btn btn-secondary btn-sm">Edit</button>
+                                <button class="btn btn-danger btn-sm">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#MED006</td>
+                            <td><strong>Omeprazole 20mg</strong></td>
+                            <td>Capsule</td>
+                            <td>BAT-2024-08</td>
+                            <td>$14.00</td>
+                            <td>64</td>
+                            <td>2027-05-18</td>
+                            <td><span class="badge badge-success">In Stock</span></td>
+                            <td>
+                                <button class="btn btn-secondary btn-sm">Edit</button>
+                                <button class="btn btn-danger btn-sm">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#MED007</td>
+                            <td><strong>Metformin 500mg</strong></td>
+                            <td>Tablet</td>
+                            <td>BAT-2024-03</td>
+                            <td>$11.20</td>
+                            <td>90</td>
+                            <td>2027-09-12</td>
+                            <td><span class="badge badge-success">In Stock</span></td>
+                            <td>
+                                <button class="btn btn-secondary btn-sm">Edit</button>
+                                <button class="btn btn-danger btn-sm">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#MED008</td>
+                            <td><strong>Hydrocortisone Cream</strong></td>
+                            <td>Ointment</td>
+                            <td>BAT-2024-07</td>
+                            <td>$7.30</td>
+                            <td>18</td>
+                            <td>2026-10-25</td>
+                            <td><span class="badge badge-warning">Low Stock</span></td>
+                            <td>
+                                <button class="btn btn-secondary btn-sm">Edit</button>
+                                <button class="btn btn-danger btn-sm">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 MediCare Pharmacy Management System. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

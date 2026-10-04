@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Management System - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">💊 MediCare Pharmacy</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="medicines.html">Medicines</a></li>
+                <li><a href="add-medicine.html">Add Medicine</a></li>
+                <li><a href="billing.html">Billing</a></li>
+                <li><a href="stock.html">Stock</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <div class="page-header">
+            <div>
+                <h1>Dashboard Overview</h1>
+                <p>Welcome to MediCare Pharmacy Management System</p>
+            </div>
+            <div>
+                <a href="billing.html" class="btn btn-primary">+ Create New Bill</a>
+                <a href="add-medicine.html" class="btn btn-secondary">+ Add Medicine</a>
+            </div>
+        </div>
+
+        <!-- Dashboard Statistics Cards -->
+        <div class="cards-grid">
+            <div class="card">
+                <h3>Total Medicines</h3>
+                <div class="value">1,250</div>
+                <p>In store database</p>
+            </div>
+            <div class="card card-warning">
+                <h3>Low Stock Items</h3>
+                <div class="value">12</div>
+                <p>Needs immediate reorder</p>
+            </div>
+            <div class="card card-danger">
+                <h3>Expiring Soon</h3>
+                <div class="value">8</div>
+                <p>Within next 30 days</p>
+            </div>
+            <div class="card card-success">
+                <h3>Today's Sales</h3>
+                <div class="value">$1,480.00</div>
+                <p>38 completed invoices</p>
+            </div>
+        </div>
+
+        <!-- Alert Notification -->
+        <div class="alert-box alert-warning">
+            ⚠️ <strong>Attention:</strong> 12 medicines are currently running below their minimum stock threshold. <a href="stock.html">Check Stock Status &rarr;</a>
+        </div>
+
+        <!-- Recent Transactions Section -->
+        <div class="section-box">
+            <h2>Recent Billing Transactions</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Invoice #</th>
+                            <th>Customer Name</th>
+                            <th>Date</th>
+                            <th>Items Count</th>
+                            <th>Total Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>INV-1024</td>
+                            <td>John Doe</td>
+                            <td>Today, 02:45 PM</td>
+                            <td>3 items</td>
+                            <td>$45.50</td>
+                            <td><span class="badge badge-success">Paid</span></td>
+                        </tr>
+                        <tr>
+                            <td>INV-1023</td>
+                            <td>Sarah Jenkins</td>
+                            <td>Today, 01:15 PM</td>
+                            <td>1 item</td>
+                            <td>$12.00</td>
+                            <td><span class="badge badge-success">Paid</span></td>
+                        </tr>
+                        <tr>
+                            <td>INV-1022</td>
+                            <td>Robert Smith</td>
+                            <td>Today, 11:30 AM</td>
+                            <td>5 items</td>
+                            <td>$89.20</td>
+                            <td><span class="badge badge-success">Paid</span></td>
+                        </tr>
+                        <tr>
+                            <td>INV-1021</td>
+                            <td>Emily Watson</td>
+                            <td>Yesterday</td>
+                            <td>2 items</td>
+                            <td>$24.00</td>
+                            <td><span class="badge badge-success">Paid</span></td>
+                        </tr>
+                        <tr>
+                            <td>INV-1020</td>
+                            <td>Michael Brown</td>
+                            <td>Yesterday</td>
+                            <td>4 items</td>
+                            <td>$67.80</td>
+                            <td><span class="badge badge-success">Paid</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 MediCare Pharmacy Management System. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
